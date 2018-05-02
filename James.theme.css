@@ -43,7 +43,7 @@ https://media.discordapp.net/attachments/440915817580986371/440923633385340948/Y
 	background-size: cover;
 	background-position: center;
 	z-index: -100;
-	opacity: 0.97;
+	opacity: .99;
 }
 
 /***
@@ -60,7 +60,7 @@ https://media.discordapp.net/attachments/440915817580986371/440923633385340948/Y
 /* In Chat objects */
 .message-group .comment .markup pre,
 .inline {
-	background: rgba(0,0,0,.5) !important;
+	background: rgba(0,0,0,) !important;
 	border: 0 solid black !important;
 	border-radius: 5px !important;
 }
@@ -89,20 +89,20 @@ https://media.discordapp.net/attachments/440915817580986371/440923633385340948/Y
 /* Title Bar */
  .titleBar-AC4pGV {
 	 margin-top: 0;
-	 padding-top: 4px;
+	 padding-top: 2px;
 	 background-color: rgba(0,0,0,.7);
  }
 
  /* Channel members */
  .scroller-2FKFPG.members-1998pB,
 .membersWrap-3wRngy .scroller-wrap .members-1998pB {
-	background-color: rgba(0,0,0, .45) !important;
+	background-color: rgba(0,0,0, .5) !important;
 }
 
  /* Chat */
 #friends > .friends-table,
 .chat .content > .flex-spacer {
-	background: rgba(0,0,0,.6);
+	background: rgba(0,0,0, .3);
 }
 
 #friends > .friends-table {
@@ -129,13 +129,13 @@ https://media.discordapp.net/attachments/440915817580986371/440923633385340948/Y
 /* Guild scroller */
 
 .guilds-wrapper {
-	background: rgba(0,0,0, .1);
+	background: rgba(0,0,0, .3);
 }
 
 /* Settings */
 
 .ui-standard-sidebar-view .sidebar-region{
-	background: rgba(0,0,0, .3) !important;
+	background: rgba(0,0,0, .2) !important;
 }
 
 .ui-standard-sidebar-view .content-region {
@@ -288,9 +288,32 @@ https://media.discordapp.net/attachments/440915817580986371/440923633385340948/Y
 	height: 100%;
 	bottom: 6px;
 	text-align: center;
-	font-size: 15px;
+	font-size: 20px;
 	color: white;
 	text-transform: uppercase;
+}
+
+.guilds-wrapper .guilds .friends-icon {
+	width:40px;
+	height:40px;
+	background-size:25px 19px;
+}
+
+.guilds-wrapper .guilds .friends-icon {
+	background-color: rgba(0,0,0,) !important;
+	background-image: none !important;
+	padding-left:5px;
+}
+
+.guilds-wrapper .guilds .friends-icon:after {
+	display:block;
+	width:40px;
+	height:40px;
+	content:'';
+	background-image: url(https://imgur.com/xGOF8Vu.gif) !important;
+	background-size:105%;
+	background-repeat:no-repeat;
+	background-position:top center;
 }
 
 :not(.guilds-wrapper.DSAC-styled) .guilds-add:hover:before {
@@ -412,17 +435,17 @@ div[class*="popout-"] > div [class*="avatarStatus-"]{
 	  right: 2px;
 	  top: -32px;
 	  position: relative;
-	  height: 30px;
-	  width: 30px;
+	  height: 28px;
+	  width: 28px;
 	  border-radius: 50%;
 	  background-color: transparent;
-	  border-width: 2px;
+	  border-width: 3.5px;
 	  border-style: solid;
 }
 
 .avatar-small .status-streaming,
 div[class*="statusStreaming-"] {
-  border-color: #593695 !important;
+  border-color: #aa80ff !important;
 }
 
 .avatar-small .status-offline,
@@ -436,21 +459,21 @@ div[class*="statusOffline-"] {
 .avatar-small .status-dnd,
 div[class*="statusDnd-"]  {
 
-  border-color: #f04747 !important;
+  border-color: #4faaff !important;
 
 }
 
 .avatar-small .status-idle,
 div[class*="statusIdle-"] {
 
-  border-color: #faa61a !important;
+  border-color: #ffff66 !important;
 
 }
 
 .avatar-small .status-online:not(.status-typing),
 div[class*="statusOnline-"]  {
 
-  border-color: #43b581 !important;
+  border-color: #00e64d !important;
 
 }
 
@@ -582,7 +605,7 @@ div[class*="statusOnline-"]  {
 /* BD Mentions */
 
 .message-group:not(.compact) .avatar-large:-webkit-any([style*="310973444369940481"]) ~ .comment .message h2 span.username-wrapper::after {
-	content: "Ancap GF";
+	content: "Smol";
 	--badgecolor: 230, 120, 230;
 	border-color: rgb(var(--badgecolor));
 	color: rgb(var(--badgecolor));
@@ -592,14 +615,6 @@ div[class*="statusOnline-"]  {
 .message-group:not(.compact) .avatar-large:-webkit-any([style*="152974815903481856"]) ~ .comment .message h2 span.username-wrapper::after {
 	content: "The Mega Chad";
 	--badgecolor: 255, 77, 77;
-	border-color: rgb(var(--badgecolor));
-	color: rgb(var(--badgecolor));
-	background: rgba(var(--badgecolor), 0.0980392);
-}
-
-.message-group:not(.compact) .avatar-large:-webkit-any([style*="131379520182681600"]) ~ .comment .message h2 span.username-wrapper::after {
-	content: "The Master Baiter";
-	--badgecolor: 201, 63, 115;
 	border-color: rgb(var(--badgecolor));
 	color: rgb(var(--badgecolor));
 	background: rgba(var(--badgecolor), 0.0980392);
@@ -615,10 +630,10 @@ div[class*="statusOnline-"]  {
 
 .message-group:not(.compact) .avatar-large:-webkit-any([style*="168267266264137728"]) ~ .comment .message h2 span.username-wrapper::after {
 	content: "Realest Nigga";
-	--badgecolor: 201, 63, 115;
-	border-color: rgb(var(--badgecolor));
+	--badgecolor: 0, 128, 64;
+	border-color: rgb(0, 0, 0);
 	color: rgb(var(--badgecolor));
-	background: rgba(var(--badgecolor), 0.0980392);
+	background: rgb(0, 0, 0);
 }
 
 .message-group:not(.compact) .avatar-large:-webkit-any([style*="219363409097916416"]) ~ .comment .message h2 span.username-wrapper::after {
